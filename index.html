@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a number</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1 class="heading">Hi!</h1>
+        <h3 class="h3">Guess a number from 1 to 10 that the computer has selected</h3>
+        <div class="input-box">
+            <input type="number" placeholder="pick" class="input">
+            <button onclick="numPick()">Guess</button>
+        </div>
+        <h3 class="h3" id="prank"></h3>
+        <!-- <h3>The computer is thinking......</h3> -->
+        <video src="./video.mp4" class="video"></video>
+    </div>
+
+
+
+    <script>
+
+        let input = document.querySelector('.input')
+        let main = document.querySelector('.main')
+        let h3 = document.querySelector('#prank')
+        let video = document.querySelector('.video')
+
+
+        function numPick() {
+            if (input.value === '') {
+                h3.innerText = 'bruh... ok try again np'
+            } else if (input.value >= 0 && input.value <= 10) {
+                console.log(input.value)
+                h3.innerText = 'The number is 🥁🥁🥁🥁-'
+
+                setTimeout(function() {
+                    video.play()
+                    video.classList.add('show')
+                }, 2000)
+
+                setTimeout(function() {
+                    
+                    alert('does it matter 😜')
+                }, 3000)
+            } else {
+                h3.innerText = 'Choose a number between 1 and 10 idiot 😠'
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

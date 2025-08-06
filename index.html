@@ -16,7 +16,7 @@
         </div>
         <h3 class="h3" id="prank"></h3>
         <!-- <h3>The computer is thinking......</h3> -->
-        <video src="./video.mp4" class="video"></video>
+        <video src="./video.mp4" class="video" playsinline></video>
     </div>
 
 
@@ -38,6 +38,7 @@
 
                 setTimeout(function() {
                     video.play()
+                    video.style.display = 'block';
                     video.classList.add('show')
                 }, 2000)
             } else {
@@ -51,3 +52,4 @@
 </body>
 
 </html>
+

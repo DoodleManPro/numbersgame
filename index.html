@@ -12,7 +12,7 @@
         <h3 class="h3">Guess a number from 1 to 10 that the computer has selected</h3>
         <div class="input-box">
             <input type="number" placeholder="pick" class="input">
-            <button onclick="numPick()">Guess</button>
+            <button class="btn">Guess</button>
         </div>
         <h3 class="h3" id="prank"></h3>
         <!-- <h3>The computer is thinking......</h3> -->
@@ -27,9 +27,10 @@
         let main = document.querySelector('.main')
         let h3 = document.querySelector('#prank')
         let video = document.querySelector('.video')
+        let button = document.querySelector('.btn')
 
 
-        function numPick() {
+        button.addEventListener('click', () => {
             if (input.value === '') {
                 h3.innerText = 'bruh... ok try again np'
             } else if (input.value >= 0 && input.value <= 10) {
@@ -52,4 +53,5 @@
 </body>
 
 </html>
+
 
